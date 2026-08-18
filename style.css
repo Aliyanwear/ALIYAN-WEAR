@@ -1,77 +1,116 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
 
 body{
-background:#050505;
-color:white;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#050505;
+    color:white;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
-.constructor{
-max-width:700px;
-margin:40px auto;
-padding:40px;
-background:linear-gradient(145deg,#151515,#080808);
-border:1px solid rgba(255,255,255,.15);
-border-radius:35px;
-box-shadow:0 0 50px rgba(0,80,255,.25);
+
+section{
+    max-width:700px;
+    margin:40px auto;
+    padding:40px 25px;
+    background:
+    linear-gradient(145deg,#171717,#090909);
+    border-radius:35px;
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:
+    0 0 40px rgba(0,100,255,0.15);
 }
 
-.constructor h2{
-font-size:42px;
-margin-bottom:20px;
+
+h1,h2{
+    font-size:42px;
+    margin-bottom:25px;
+    font-weight:800;
 }
 
-.constructor p{
-font-size:20px;
-color:#bdbdbd;
-line-height:1.5;
-margin-bottom:30px;
+
+h3{
+    font-size:22px;
+    margin:25px 0 15px;
 }
 
-.constructor h3{
-font-size:25px;
-margin-top:30px;
-margin-bottom:15px;
+
+p{
+    color:#cfcfcf;
+    font-size:20px;
+    line-height:1.6;
+    margin-bottom:20px;
 }
 
 
 button{
-background:#0866ff;
-color:white;
-border:none;
-padding:18px 35px;
-border-radius:50px;
-font-size:18px;
-margin:8px;
-cursor:pointer;
-box-shadow:0 10px 30px rgba(0,100,255,.35);
+    width:100%;
+    padding:18px;
+    margin:10px 0;
+    border:none;
+    border-radius:50px;
+    background:#0066ff;
+    color:white;
+    font-size:20px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:
+    0 0 25px rgba(0,102,255,0.5);
 }
 
 
 button:hover{
-transform:scale(1.05);
-}
-
-
-.sizes{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
+    transform:scale(1.03);
 }
 
 
 input{
-margin-top:15px;
-font-size:16px;
+    width:100%;
+    padding:18px;
+    border-radius:20px;
+    border:none;
+    font-size:18px;
+    margin:15px 0;
 }
 
 
-.order-btn{
-width:100%;
-margin-top:35px;
-font-size:22px;
+input[type="file"]{
+    background:white;
+    color:black;
+    padding:10px;
+}
+
+
+.sizes{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+
+.sizes button{
+    margin:0;
+}
+
+
+@media(max-width:600px){
+
+section{
+    margin:20px;
+    padding:30px 20px;
+}
+
+
+h1,h2{
+    font-size:34px;
+}
+
+
+p{
+    font-size:18px;
+}
+
 }
