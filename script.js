@@ -31,9 +31,15 @@ event.target.classList.add("selected");
 }
 
 // выбор стиля
-function changeStyle(style){
+function changeStyle(style,event){
 
     selectedStyle = style;
+    
+    document.querySelectorAll(".style button").forEach(btn=>{
+    btn.classList.remove("selected");
+});
+
+event.target.classList.add("selected");
 
     console.log(
         "Стиль:",
