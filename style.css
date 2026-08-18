@@ -254,4 +254,5 @@ inset 0 0 40px rgba(255,255,255,0.05);
     max-width: 480px;
     height: auto;
     object-fit: contain;
+    transform: translateY(25px);
 }
