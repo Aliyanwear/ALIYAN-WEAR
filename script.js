@@ -52,9 +52,15 @@ function changeStyle(style,event){
 
 
 // выбор размера
-function changeSize(size){
+function changeSize(size, button){
 
     selectedSize = size;
+
+    document.querySelectorAll(".size-button").forEach(btn=>{
+        btn.classList.remove("selected");
+    });
+
+    button.classList.add("selected");
 
     console.log(
         "Размер:",
