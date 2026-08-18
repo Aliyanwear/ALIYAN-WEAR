@@ -178,3 +178,13 @@ font-size:34px;
 }
 
 }
+.logo-header {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.logo-header img {
+  width: 140px;
+  height: auto;
+  filter: drop-shadow(0 0 20px #0066ff);
+}
