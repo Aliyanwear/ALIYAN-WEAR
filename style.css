@@ -208,12 +208,12 @@ font-size:34px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 350px;
+    min-height: 450px;
     overflow: hidden;
 }
 
 .design-preview {
     position: absolute;
-    width: 140px;
+    width: 130px;
     opacity: 0.9;
 }
