@@ -105,3 +105,15 @@ function createOrder(){
     );
 
 }
+
+function changeColor(color) {
+  const tshirt = document.getElementById("tshirtImage");
+
+  if (color === "white") {
+    tshirt.src = "tshirt-white.PNG";
+  }
+
+  if (color === "black") {
+    tshirt.src = "tshirt-black.PNG";
+  }
+}
