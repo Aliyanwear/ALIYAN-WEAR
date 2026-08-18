@@ -220,7 +220,7 @@ font-size:34px;
 .tshirt-preview {
   position: relative;
   width: 320px;
-  height: 360px;
+  height: 330px;
   margin: 40px auto;
   display: flex;
   justify-content: center;
@@ -246,7 +246,7 @@ font-size:34px;
 }
 
 #tshirtImage {
-    width: 70%;
+    width: 80%;
     max-width: 480px;
     height: auto;
     object-fit: contain;
