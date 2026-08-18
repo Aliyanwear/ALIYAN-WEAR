@@ -1,180 +1,180 @@
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Arial,sans-serif;
 }
-
 
 body{
-    background:#050505;
+    background:#020305;
     color:white;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    overflow-x:hidden;
 }
 
-
-section{
-    max-width:700px;
-    margin:40px auto;
-    padding:40px 25px;
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
     background:
-    linear-gradient(145deg,#171717,#090909);
-    border-radius:35px;
-    border:1px solid rgba(255,255,255,0.15);
-    box-shadow:
-    0 0 40px rgba(0,100,255,0.15);
+    radial-gradient(circle at top,#0066ff55,transparent 35%),
+    radial-gradient(circle at bottom,#0044ff33,transparent 40%);
+    z-index:-1;
 }
 
 
-h1,h2{
-    font-size:42px;
-    margin-bottom:25px;
+/* LOGO STYLE */
+
+.logo{
+    width:90px;
+    filter:drop-shadow(0 0 20px #0066ff);
+}
+
+
+/* CARDS */
+
+section,
+.constructor,
+.order,
+.contacts{
+    margin:25px 15px;
+    padding:30px 20px;
+    border-radius:35px;
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.12),
+    rgba(255,255,255,.04)
+    );
+
+    backdrop-filter:blur(25px);
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.5);
+}
+
+
+/* TITLES */
+
+h1{
+    font-size:48px;
+    line-height:1.05;
     font-weight:800;
 }
 
+h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
 
 h3{
-    font-size:22px;
-    margin:25px 0 15px;
+    font-size:25px;
+    margin:30px 0 15px;
 }
 
 
 p{
-    color:#cfcfcf;
+    color:#c7c7cc;
     font-size:20px;
-    line-height:1.6;
-    margin-bottom:20px;
+    line-height:1.5;
 }
 
+
+
+/* BUTTONS */
 
 button{
     width:100%;
-    padding:18px;
     margin:10px 0;
+    padding:20px;
+
+    border-radius:25px;
     border:none;
-    border-radius:50px;
+
     background:#0066ff;
     color:white;
-    font-size:20px;
+
+    font-size:22px;
     font-weight:700;
-    cursor:pointer;
+
     box-shadow:
-    0 0 25px rgba(0,102,255,0.5);
+    0 10px 30px #0066ff66;
+
+    transition:.3s;
 }
 
 
-button:hover{
-    transform:scale(1.03);
+button:active{
+    transform:scale(.96);
 }
 
 
-input{
-    width:100%;
-    padding:18px;
-    border-radius:20px;
-    border:none;
-    font-size:18px;
-    margin:15px 0;
-}
 
-
-input[type="file"]{
-    background:white;
-    color:black;
-    padding:10px;
-}
-
+/* SIZE BUTTONS */
 
 .sizes{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
     gap:15px;
 }
 
 
 .sizes button{
-    margin:0;
+    padding:18px;
 }
 
 
-@media(max-width:600px){
 
-section{
-    margin:20px;
-    padding:30px 20px;
-}
-
-
-h1,h2{
-    font-size:34px;
-}
-
-
-p{
-    font-size:18px;
-}
-
-}
-/* FIX ALIYAN WEAR MOBILE */
-
-.hero,
-.constructor{
-    overflow:hidden;
-}
-
-
-.tshirt{
-    max-width:280px;
-    height:360px;
-    margin:40px auto;
-    display:block;
-    border-radius:35px;
-}
-
-
-.constructor h2{
-    text-align:center;
-}
-
-
-.constructor p{
-    text-align:center;
-}
-
+/* INPUT */
 
 input{
-    display:block;
     width:100%;
-    max-width:400px;
-    margin:20px auto;
-}
+    padding:20px;
 
-
-#orderCheck button{
-    width:100%;
-}
-
-
-@media(max-width:600px){
-
-section{
-    width:100%;
-    margin:20px 0;
     border-radius:25px;
-}
+    border:none;
 
-
-h2{
-    font-size:34px;
-}
-
-
-button{
     font-size:18px;
 }
 
 
-.sizes{
-    grid-template-columns:repeat(2,1fr);
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+
+.hero span{
+    color:#0066ff;
+}
+
+
+
+/* PRICE */
+
+.price{
+    font-size:24px;
+    margin:20px 0;
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+h1{
+font-size:42px;
+}
+
+h2{
+font-size:34px;
 }
 
 }
