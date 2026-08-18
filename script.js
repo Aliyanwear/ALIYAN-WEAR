@@ -17,7 +17,7 @@ document.querySelectorAll(".color-button").forEach(btn=>{
     btn.classList.remove("selected");
 });
 
-event.classList.add("selected");
+event.target.classList.add("selected");
 
 if(color === "white"){
     tshirt.src = "tshirt-white.PNG";
