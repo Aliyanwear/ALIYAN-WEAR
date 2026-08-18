@@ -32,11 +32,11 @@ function changeStyle(style,event){
 
     selectedStyle = style;
 
-    document.querySelectorAll(".style button").forEach(btn=>{
+    document.querySelectorAll(".style-button").forEach(btn=>{
         btn.classList.remove("selected");
     });
 
-    event.target.classList.add("selected");
+        event.classList.add("selected");
 
     console.log(
         "Стиль:",
