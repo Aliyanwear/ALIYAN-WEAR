@@ -87,10 +87,10 @@ button {
     margin:12px 0;
 
     border:none;
-    border-radius:22px;
+    border-radius:28px;
 
     background:
-    linear-gradient(145deg,#0a84ff,#0066ff);
+rgba(0,102,255,0.85);
 
     color:white;
     font-size:22px;
@@ -99,7 +99,7 @@ button {
     box-shadow:
     0 15px 35px rgba(0,102,255,.35);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(30px);
 }
 
 
