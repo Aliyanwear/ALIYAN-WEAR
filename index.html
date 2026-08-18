@@ -1,200 +1,37 @@
-<!DOCTYPE html>
-<html lang="ru">
+<section class="constructor">
 
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ALIYAN WEAR | Custom Streetwear</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-
-<body>
-
-
-<section class="hero">
-
-
-<div class="glass">
-
-<h1>
-ALIYAN <span class="blue">WEAR</span>
-</h1>
-
-
-<h2>
-Создай футболку<br>
-со своим дизайном
-</h2>
-
+<h2>👕 Создай свою футболку</h2>
 
 <p>
-Premium качество<br>
-100% турецкий хлопок<br>
-Standard и Oversize<br>
-Бесплатная доставка по России и Тоҷикистон
+Выбери параметры и загрузи свой дизайн.
+Мы создадим уникальную футболку ALIYAN WEAR.
 </p>
-
-
-
-<h2>
-Конструктор футболки
-</h2>
-
-
-<p>
-Выбери параметры и загрузи свой дизайн
-</p>
-
-
-
-<h3>Цвет:</h3>
-
-<button onclick="changeColor('white')">
-⚪ Белая
-</button>
-
-
-<button onclick="changeColor('black')">
-⚫ Чёрная
-</button>
-
-
-
-
-<h3>Стиль:</h3>
-
-<button onclick="changeStyle('Standard')">
-Standard
-</button>
-
-
-
-
-
-
-<script src="script.js"></script>
-<section class="glass" style="margin:40px 8%;padding:40px;">
-
-<h2>
-👕 Конструктор ALIYAN WEAR
-</h2>
-
-<p>
-Создай свою уникальную футболку
-</p>
-
 
 <h3>Цвет футболки:</h3>
 
-<button onclick="shirtColor='white'">
-⚪ Белая
-</button>
-
-<button onclick="shirtColor='black'">
-⚫ Чёрная
-</button>
-
-
-
-<h3>Стиль:</h3>
-
-<button>
-Standard
-</button>
-
-<button>
-Oversize
-</button>
-
-
-
-<h3>Размер:</h3>
-
-<button>S</button>
-<button>M</button>
-<button>L</button>
-<button>XL</button>
-<button>2XL</button>
-<button>3XL</button>
-<button>4XL</button>
-
-
-
-<h3>
-Добавить свой дизайн
-</h3>
-
-
-<input 
-type="file"
-accept="image/*"
->
-
-
-
-<h2>
-Цена:
-</h2>
-
-
-<p>
-🇷🇺 Россия — 2490₽
-<br>
-🇹🇯 Тоҷикистон — 259 сомонӣ
-</p>
-
-
-<button>
-Оформить заказ
-</button>
-
-
-</section>
-<section class="glass" style="margin:40px 8%;padding:40px;">
-
-<h2>
-👕 Конструктор ALIYAN WEAR
-</h2>
-
-<p>
-Создай футболку со своим дизайном
-</p>
-
-
-<h3>
-Цвет:
-</h3>
-
-<button>
+<button onclick="changeColor('white')">
 ⚪ Белая футболка
 </button>
 
-<button>
+<button onclick="changeColor('black')">
 ⚫ Чёрная футболка
 </button>
 
 
-<h3>
-Стиль:
-</h3>
+<h3>Стиль:</h3>
 
-<button>
+<button onclick="selectStyle('Standard')">
 Standard
 </button>
 
-<button>
+<button onclick="selectStyle('Oversize')">
 Oversize
 </button>
 
 
-<h3>
-Размер:
-</h3>
+<h3>Размер:</h3>
+
+<div class="sizes">
 
 <button>S</button>
 <button>M</button>
@@ -204,31 +41,28 @@ Oversize
 <button>3XL</button>
 <button>4XL</button>
 
+</div>
 
-<h3>
-Добавить свой дизайн:
-</h3>
+
+<h3>Добавь свой дизайн:</h3>
 
 <input type="file" accept="image/*">
 
 
-<h2>
-Цена:
-</h2>
+<h2>Цена:</h2>
 
 <p>
 🇷🇺 Россия — 2490₽
-<br>
+</p>
+
+<p>
 🇹🇯 Тоҷикистон — 259 сомонӣ
 </p>
 
 
-<button>
+<button class="order-btn">
 Оформить заказ
 </button>
 
 
 </section>
-</body>
-
-</html>
