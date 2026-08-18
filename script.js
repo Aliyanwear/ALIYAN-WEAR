@@ -20,15 +20,14 @@ document.querySelectorAll(".color-button").forEach(btn=>{
 event.classList.add("selected");
 
 if(color === "white"){
-tshirt.src = "tshirt-white.PNG";
+    tshirt.src = "tshirt-white.PNG";
 }
 
 if(color === "black"){
-tshirt.src = "tshirt-black.PNG";
+    tshirt.src = "tshirt-black.PNG";
 }
 
 }
-
     
 
 
