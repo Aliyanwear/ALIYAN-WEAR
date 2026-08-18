@@ -219,8 +219,8 @@ font-size:34px;
 }
 
 #tshirtImage {
-    width: 95%;
-    max-width: 440px;
+    width: 105%;
+    max-width: 480px;
     height: auto;
     object-fit: contain;
 }
