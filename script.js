@@ -8,11 +8,31 @@ let currentSide = "front";
 const priceRussia = 2490;
 const priceTajikistan = 259;
 
+function updateTshirtImage() {
+    const tshirt = document.getElementById("tshirtImage");
+
+    if (selectedSide === "front") {
+        if (selectedColor === "white") {
+            tshirt.src = "tshirt-white.PNG";
+        } else {
+            tshirt.src = "tshirt-black.PNG";
+        }
+    }
+
+    if (selectedSide === "back") {
+        if (selectedColor === "white") {
+            tshirt.src = "tshirt-white-back.PNG";
+        } else {
+            tshirt.src = "tshirt-black-back.PNG";
+        }
+    }
+}
+
 
 // выбор цвета футболки
 function changeColor(color, button){
 
-    const tshirt = document.getElementById("tshirtImage");
+    selectedColor = color;
 
     document.querySelectorAll(".color-button").forEach(btn=>{
         btn.classList.remove("selected");
@@ -20,17 +40,26 @@ function changeColor(color, button){
 
     button.classList.add("selected");
 
-    if(color === "white"){
-        tshirt.src = "tshirt-white.PNG";
-    }
-
-    if(color === "black"){
-        tshirt.src = "tshirt-black.PNG";
-    }
-
+    updateTshirtImage();
 }
-    
 
+function changeSide(side, button){
+
+    selectedSide = side;
+
+    document.querySelectorAll(".side-button").forEach(btn=>{
+        btn.classList.remove("selected");
+    });
+
+    button.classList.add("selected");
+
+    updateTshirtImage();
+}
+
+
+    
+    
+    
 
 // выбор стиля
 function changeStyle(style,event){
