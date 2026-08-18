@@ -175,27 +175,23 @@ design.addEventListener("touchstart", function(e){
 
     }
 
-}, {passive:false});
-
+});
 
 
 design.addEventListener("touchmove", function(e){
 
     if(e.touches.length === 2){
 
-        e.preventDefault();
-
-
-        let newDistance = getDistance(
+        let distance = getDistance(
             e.touches[0],
             e.touches[1]
         );
 
 
-        let difference = newDistance - startDistance;
+        let zoom = distance / startDistance;
 
 
-        scale += difference * 0.005;
+        scale = scale * zoom;
 
 
         if(scale < 0.5){
@@ -203,21 +199,20 @@ design.addEventListener("touchmove", function(e){
         }
 
 
-        if(scale > 2.5){
-            scale = 2.5;
+        if(scale > 3){
+            scale = 3;
         }
 
 
-        design.style.transform =
-        `translate(-50%, -50%) scale(${scale})`;
+        design.style.width = 
+        (120 * scale) + "px";
 
 
-        startDistance = newDistance;
+        startDistance = distance;
 
     }
 
-}, {passive:false});
-
+});
 
 
 function getDistance(a,b){
@@ -225,6 +220,6 @@ function getDistance(a,b){
     let x = a.clientX - b.clientX;
     let y = a.clientY - b.clientY;
 
-    return Math.sqrt(x*x + y*y);
+    return Math.sqrt(x*x+y*y);
 
 }
