@@ -5,10 +5,12 @@
     font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Arial,sans-serif;
 }
 
-body{
-    background:#020305;
+body {
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+    background:
+    radial-gradient(circle at top,#123b78,#05070d 45%);
     color:white;
-    overflow-x:hidden;
 }
 
 body::before{
@@ -38,20 +40,15 @@ section,
 .contacts{
     margin:25px 15px;
     padding:30px 20px;
-    border-radius:35px;
+    border-radius:45px;
 
-    background:
-    linear-gradient(
-    145deg,
-    rgba(255,255,255,.12),
-    rgba(255,255,255,.04)
-    );
+    background: rgba(255,255,255,0.08);
 
-    backdrop-filter:blur(25px);
+    backdrop-filter:blur(35px);
     border:1px solid rgba(255,255,255,.15);
 
     box-shadow:
-    0 20px 60px rgba(0,0,0,.5);
+0 20px 60px rgba(0,0,0,0.35);
 }
 
 
@@ -84,24 +81,25 @@ p{
 
 /* BUTTONS */
 
-button{
+button {
     width:100%;
-    margin:10px 0;
     padding:20px;
+    margin:12px 0;
 
-    border-radius:25px;
     border:none;
+    border-radius:22px;
 
-    background:#0066ff;
+    background:
+    linear-gradient(145deg,#0a84ff,#0066ff);
+
     color:white;
-
     font-size:22px;
     font-weight:700;
 
     box-shadow:
-    0 10px 30px #0066ff66;
+    0 15px 35px rgba(0,102,255,.35);
 
-    transition:.3s;
+    backdrop-filter:blur(20px);
 }
 
 
