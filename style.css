@@ -254,9 +254,19 @@ inset 0 0 40px rgba(255,255,255,0.05);
 }
 
 .design-preview {
-    position: absolute;
-    width: 130px;
-    opacity: 0.9;
+  position: absolute;
+
+  width: 120px;
+  height: auto;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  opacity: 0.95;
+
+  pointer-events: none;
 }
 
 #tshirtImage {
