@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ALIYAN WEAR | Custom Streetwear</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<section class="hero">
+
+
+<div class="glass">
+
+<h1>
+ALIYAN <span class="blue">WEAR</span>
+</h1>
+
+
+<h2>
+Создай футболку<br>
+со своим дизайном
+</h2>
+
+
+<p>
+Premium качество<br>
+100% турецкий хлопок<br>
+Standard и Oversize<br>
+Бесплатная доставка по России и Тоҷикистон
+</p>
+
+
+<button onclick="scrollToConstructor()">
+Создать заказ
+</button>
+
+
+</div>
+
+
+
+<div class="tshirt"></div>
+
+
+</section>
+
+
+
+
+<section id="constructor" class="glass" style="margin:40px 8%;padding:40px;">
+
+
+<h2>
+Конструктор футболки
+</h2>
+
+
+<p>
+Выбери параметры и загрузи свой дизайн
+</p>
+
+
+
+<h3>Цвет:</h3>
+
+<button onclick="changeColor('white')">
+⚪ Белая
+</button>
+
+
+<button onclick="changeColor('black')">
+⚫ Чёрная
+</button>
+
+
+
+
+<h3>Стиль:</h3>
+
+<button onclick="changeStyle('Standard')">
+Standard
+</button>
+
+
+<button onclick="changeStyle('Oversize')">
+Oversize
+</button>
+
+
+
+
+<h3>Размер:</h3>
+
+<button onclick="changeSize('S')">S</button>
+<button onclick="changeSize('M')">M</button>
+<button onclick="changeSize('L')">L</button>
+<button onclick="changeSize('XL')">XL</button>
+<button onclick="changeSize('2XL')">2XL</button>
+<button onclick="changeSize('3XL')">3XL</button>
+<button onclick="changeSize('4XL')">4XL</button> 
+  <h3>
+Добавь свой дизайн
+</h3>
+
+
+<input 
+type="file"
+accept="image/*"
+onchange="uploadDesign(event)"
+>
+
+
+<br><br>
+
+
+<h2>
+Цена:
+</h2>
+
+
+<p>
+🇷🇺 Россия: <b>2490₽</b>
+<br>
+🇹🇯 Тоҷикистон: <b>259 сомонӣ</b>
+</p>
+
+
+<button onclick="createOrder()">
+Оформить заказ
+</button>
+
+
+</section>
+
+
+
+
+<section class="glass" style="margin:40px 8%;padding:40px;">
+
+<h2>
+Проверка заказа
+</h2>
+
+<p>
+Введите номер заказа:
+</p>
+
+<input 
+type="text"
+placeholder="ALIYAN #10245"
+style="padding:15px;border-radius:20px;"
+>
+
+
+<button>
+Проверить статус
+</button>
+
+
+</section>
+
+
+
+
+<section class="glass" style="margin:40px 8%;padding:40px;">
+
+<h2>
+Контакты
+</h2>
+
+<p>
+📸 Instagram: @aliyan.wear
+<br><br>
+
+✉️ Email:
+<br>
+aliyanwear@gmail.com
+
+<br><br>
+
+🇷🇺 Россия
+<br>
+🇹🇯 Тоҷикистон
+</p>
+
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
