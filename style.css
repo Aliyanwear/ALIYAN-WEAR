@@ -220,12 +220,12 @@ font-size:34px;
 .tshirt-preview {
   position: relative;
   width: 320px;
-  height: 420px;
+  height: 3600px;
   margin: 40px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.08);
   backdrop-filter: blur(25px);
   border-radius: 40px;
   border: 1px solid rgba(255,255,255,0.15);
@@ -246,7 +246,7 @@ font-size:34px;
 }
 
 #tshirtImage {
-    width: 105%;
+    width: 70%;
     max-width: 480px;
     height: auto;
     object-fit: contain;
