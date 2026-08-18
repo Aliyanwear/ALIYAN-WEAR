@@ -62,16 +62,9 @@ function uploadDesign(event){
 
     reader.onload = function(e){
 
-        const tshirt =
-        document.querySelector(".tshirt");
+        const design = document.getElementById("designPreview");
 
-
-        tshirt.style.backgroundImage =
-        `url(${e.target.result})`;
-
-        tshirt.style.backgroundSize =
-        "cover";
-
+design.src = e.target.result;
     }
 
 
