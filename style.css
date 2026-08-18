@@ -35,7 +35,6 @@ body::before{
 /* CARDS */
 
 section,
-.constructor,
 .order,
 .contacts{
     margin:25px 15px;
@@ -47,8 +46,35 @@ section,
     backdrop-filter:blur(35px);
     border:1px solid rgba(255,255,255,.15);
 
+box-shadow:
+0 30px 80px rgba(0,102,255,0.25),
+inset 0 0 40px rgba(255,255,255,0.05);
+
     box-shadow:
 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.constructor{
+
+background:
+rgba(255,255,255,0.06);
+
+backdrop-filter:
+blur(35px);
+
+border:
+1px solid rgba(255,255,255,0.18);
+
+border-radius:
+45px;
+
+box-shadow:
+0 30px 80px rgba(0,102,255,0.25),
+inset 0 0 50px rgba(255,255,255,0.05);
+
+padding:
+35px 20px;
+
 }
 
 
