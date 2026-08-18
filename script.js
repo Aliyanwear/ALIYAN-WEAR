@@ -14,7 +14,7 @@ function changeColor(color, event){
 const tshirt = document.getElementById("tshirtImage");
 
 document.querySelectorAll(".color-button").forEach(btn=>{
-btn.classList.remove("selected");
+    btn.classList.remove("selected");
 });
 
 event.classList.add("selected");
@@ -29,18 +29,6 @@ tshirt.src = "tshirt-black.PNG";
 
 }
 
-    document.querySelectorAll(".color-button").forEach(btn=>{
-        btn.classList.remove("selected");
-    });
-
-    event.classList.add("selected");
-}
-
-if(color === "black"){
-    tshirt.src = "tshirt-black.PNG";
-}
-
-    
     
 
 
