@@ -7,7 +7,7 @@
 
 body {
     margin:0;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", sans-serif;
     background:
     radial-gradient(circle at top,#123b78,#05070d 45%);
     color:white;
@@ -55,9 +55,9 @@ section,
 /* TITLES */
 
 h1{
-    font-size:48px;
+    font-size:44px;
     line-height:1.05;
-    font-weight:800;
+    font-weight:700;
 }
 
 h2{
@@ -145,6 +145,9 @@ input{
     display:flex;
     flex-direction:column;
     justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
 }
 
 
