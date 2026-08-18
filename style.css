@@ -114,3 +114,67 @@ p{
 }
 
 }
+/* FIX ALIYAN WEAR MOBILE */
+
+.hero,
+.constructor{
+    overflow:hidden;
+}
+
+
+.tshirt{
+    max-width:280px;
+    height:360px;
+    margin:40px auto;
+    display:block;
+    border-radius:35px;
+}
+
+
+.constructor h2{
+    text-align:center;
+}
+
+
+.constructor p{
+    text-align:center;
+}
+
+
+input{
+    display:block;
+    width:100%;
+    max-width:400px;
+    margin:20px auto;
+}
+
+
+#orderCheck button{
+    width:100%;
+}
+
+
+@media(max-width:600px){
+
+section{
+    width:100%;
+    margin:20px 0;
+    border-radius:25px;
+}
+
+
+h2{
+    font-size:34px;
+}
+
+
+button{
+    font-size:18px;
+}
+
+
+.sizes{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
