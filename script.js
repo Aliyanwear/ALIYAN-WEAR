@@ -175,12 +175,16 @@ design.addEventListener("touchstart", function(e){
 
     }
 
-});
+}, {passive:false});
+
 
 
 design.addEventListener("touchmove", function(e){
 
     if(e.touches.length === 2){
+
+        e.preventDefault();
+
 
         let newDistance = getDistance(
             e.touches[0],
@@ -188,45 +192,39 @@ design.addEventListener("touchmove", function(e){
         );
 
 
-        if(startDistance){
-
-            let zoom = newDistance / startDistance;
-
-            scale = scale * zoom;
+        let difference = newDistance - startDistance;
 
 
-            if(scale < 0.3){
-                scale = 0.3;
-            }
+        scale += difference * 0.005;
 
 
-            if(scale > 3){
-                scale = 3;
-            }
-
-
-            design.style.transform =
-            "scale(" + scale + ")";
-
-
-            startDistance = newDistance;
-
+        if(scale < 0.5){
+            scale = 0.5;
         }
+
+
+        if(scale > 2.5){
+            scale = 2.5;
+        }
+
+
+        design.style.transform =
+        `translate(-50%, -50%) scale(${scale})`;
+
+
+        startDistance = newDistance;
 
     }
 
-});
+}, {passive:false});
 
 
 
-function getDistance(touch1, touch2){
+function getDistance(a,b){
 
-    let x = touch1.clientX - touch2.clientX;
-    let y = touch1.clientY - touch2.clientY;
+    let x = a.clientX - b.clientX;
+    let y = a.clientY - b.clientY;
 
-
-    return Math.sqrt(
-        x*x + y*y
-    );
+    return Math.sqrt(x*x + y*y);
 
 }
