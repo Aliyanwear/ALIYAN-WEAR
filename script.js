@@ -9,23 +9,23 @@ const priceTajikistan = 259;
 
 
 // выбор цвета футболки
-function changeColor(color, event){
+function changeColor(color, button){
 
-const tshirt = document.getElementById("tshirtImage");
+    const tshirt = document.getElementById("tshirtImage");
 
-document.querySelectorAll(".color-button").forEach(btn=>{
-    btn.classList.remove("selected");
-});
+    document.querySelectorAll(".color-button").forEach(btn=>{
+        btn.classList.remove("selected");
+    });
 
-event.target.classList.add("selected");
+    button.classList.add("selected");
 
-if(color === "white"){
-    tshirt.src = "tshirt-white.PNG";
-}
+    if(color === "white"){
+        tshirt.src = "tshirt-white.PNG";
+    }
 
-if(color === "black"){
-    tshirt.src = "tshirt-black.PNG";
-}
+    if(color === "black"){
+        tshirt.src = "tshirt-black.PNG";
+    }
 
 }
     
