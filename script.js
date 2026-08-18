@@ -3,6 +3,7 @@
 let selectedColor = "white";
 let selectedStyle = "Oversize";
 let selectedSize = "M";
+let currentSide = "front";
 
 const priceRussia = 2490;
 const priceTajikistan = 259;
@@ -223,3 +224,22 @@ function getDistance(a,b){
     return Math.sqrt(x*x+y*y);
 
 }
+
+function switchSide(side, button){
+
+    currentSide = side;
+
+    document.querySelectorAll(".side-button").forEach(btn=>{
+        btn.classList.remove("selected");
+    });
+
+    button.classList.add("selected");
+
+    console.log("Тараф:", currentSide);
+}
+
+
+
+
+
+
