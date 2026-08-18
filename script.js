@@ -158,3 +158,75 @@ design.addEventListener("pointerup", function(){
 
 });
 
+
+
+let scale = 1;
+let startDistance = 0;
+
+
+design.addEventListener("touchstart", function(e){
+
+    if(e.touches.length === 2){
+
+        startDistance = getDistance(
+            e.touches[0],
+            e.touches[1]
+        );
+
+    }
+
+});
+
+
+design.addEventListener("touchmove", function(e){
+
+    if(e.touches.length === 2){
+
+        let newDistance = getDistance(
+            e.touches[0],
+            e.touches[1]
+        );
+
+
+        if(startDistance){
+
+            let zoom = newDistance / startDistance;
+
+            scale = scale * zoom;
+
+
+            if(scale < 0.3){
+                scale = 0.3;
+            }
+
+
+            if(scale > 3){
+                scale = 3;
+            }
+
+
+            design.style.transform =
+            "scale(" + scale + ")";
+
+
+            startDistance = newDistance;
+
+        }
+
+    }
+
+});
+
+
+
+function getDistance(touch1, touch2){
+
+    let x = touch1.clientX - touch2.clientX;
+    let y = touch1.clientY - touch2.clientY;
+
+
+    return Math.sqrt(
+        x*x + y*y
+    );
+
+}
