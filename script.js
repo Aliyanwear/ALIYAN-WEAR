@@ -116,3 +116,45 @@ function createOrder(){
 
 }
 
+const design = document.getElementById("designPreview");
+
+let isMoving = false;
+let startX;
+let startY;
+let startLeft = 0;
+let startTop = 0;
+
+design.addEventListener("pointerdown", function(e){
+
+    isMoving = true;
+
+    startX = e.clientX;
+    startY = e.clientY;
+
+    startLeft = design.offsetLeft;
+    startTop = design.offsetTop;
+
+    design.setPointerCapture(e.pointerId);
+
+});
+
+
+design.addEventListener("pointermove", function(e){
+
+    if(!isMoving) return;
+
+    let x = startLeft + (e.clientX - startX);
+    let y = startTop + (e.clientY - startY);
+
+    design.style.left = x + "px";
+    design.style.top = y + "px";
+
+});
+
+
+design.addEventListener("pointerup", function(){
+
+    isMoving = false;
+
+});
+
