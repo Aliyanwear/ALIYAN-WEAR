@@ -217,3 +217,10 @@ font-size:34px;
     width: 130px;
     opacity: 0.9;
 }
+
+#tshirtImage {
+    width: 60%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+}
