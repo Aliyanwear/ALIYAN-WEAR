@@ -267,3 +267,10 @@ inset 0 0 40px rgba(255,255,255,0.05);
     object-fit: contain;
     transform: translateY(25px);
 }
+
+.size-button.selected{
+    background:#1557ff;
+    border:1px solid #008cff;
+    box-shadow:0 0 20px #008cff;
+    color:white;
+}
