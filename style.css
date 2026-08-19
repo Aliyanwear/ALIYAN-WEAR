@@ -1,7 +1,7 @@
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
@@ -9,20 +9,22 @@
 body{
 
     background:
-    radial-gradient(circle at top,#1b4cff,#050505 60%);
+    radial-gradient(circle at top,#1b5cff,#050505 60%);
 
     color:white;
+
     min-height:100vh;
 
 }
 
 
-/* HEADER */
 
-header{
+.header{
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
     padding:25px;
@@ -30,126 +32,44 @@ header{
 }
 
 
+
 .logo{
 
-    width:140px;
-    height:auto;
-
-}
-
-
-/* LANGUAGE */
-
-.language button{
-
-    background:
-    rgba(255,255,255,0.12);
-
-    color:white;
-
-    border:
-    1px solid rgba(255,255,255,0.2);
-
-    padding:10px 15px;
-
-    border-radius:20px;
-
-    margin-left:5px;
-
-    cursor:pointer;
+    width:150px;
 
 }
 
 
 
-/* MAIN */
-
-main{
-
-    text-align:center;
-    padding:20px;
-
-}
-
-
-#title{
-
-    font-size:48px;
-
-    font-weight:800;
-
-    letter-spacing:2px;
-
-}
-
-
-#subtitle{
-
-    margin-top:15px;
-
-    opacity:.8;
-
-}
-
-
-
-/* HERO */
-
-.hero{
-
-    margin-top:40px;
-
-    background:
-    rgba(255,255,255,0.08);
-
-    backdrop-filter:blur(30px);
-
-    border:
-    1px solid rgba(255,255,255,0.15);
-
-    border-radius:40px;
-
-    padding:40px;
-
-    max-width:500px;
-
-    margin-left:auto;
-    margin-right:auto;
-
-}
-
-
-.main-shirt{
-
-    width:280px;
-
-}
-
-
-
-/* BUTTONS */
 
 button{
 
     background:
     rgba(255,255,255,0.12);
 
+
     color:white;
 
+
     border:
+
     1px solid rgba(255,255,255,0.2);
 
-    padding:15px 25px;
+
+    padding:12px 22px;
+
 
     border-radius:30px;
 
+
     cursor:pointer;
 
-    margin:10px;
 
-    font-size:16px;
+    transition:.3s;
+
 
 }
+
 
 
 button:hover{
@@ -161,35 +81,328 @@ button:hover{
 
 
 
-/* CATALOG */
-
-.catalog{
-
-    margin-top:50px;
-
-}
 
 
-.product{
+.hero{
+
 
     margin:30px auto;
 
-    max-width:300px;
+
+    max-width:600px;
+
+
+    padding:50px 30px;
+
+
+    text-align:center;
+
 
     background:
+
     rgba(255,255,255,0.08);
+
+
 
     backdrop-filter:blur(30px);
 
-    border-radius:30px;
 
-    padding:25px;
+
+    border:
+
+    1px solid rgba(255,255,255,0.15);
+
+
+
+    border-radius:40px;
+
 
 }
 
 
-.product img{
 
-    width:220px;
+.hero h1{
+
+
+    font-size:55px;
+
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+.hero p{
+
+    margin:20px;
+
+    opacity:.8;
+
+}
+
+
+
+
+
+
+
+.catalog{
+
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+
+
+.products{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.product-card{
+
+
+    width:300px;
+
+
+    padding:25px;
+
+
+    background:
+
+    rgba(255,255,255,0.08);
+
+
+
+    backdrop-filter:blur(30px);
+
+
+
+    border-radius:35px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,0.15);
+
+}
+
+
+
+.product-card img{
+
+
+    width:230px;
+
+}
+
+
+
+
+
+
+.constructor{
+
+
+    margin:50px auto;
+
+    max-width:600px;
+
+    text-align:center;
+
+
+    padding:30px;
+
+
+}
+
+
+
+.tshirt-box{
+
+
+    position:relative;
+
+
+    width:320px;
+
+
+    height:420px;
+
+
+    margin:30px auto;
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+
+    border-radius:40px;
+
+
+
+    backdrop-filter:blur(30px);
+
+
+}
+
+
+
+.tshirt-box img{
+
+
+    max-width:80%;
+
+
+    max-height:80%;
+
+
+}
+
+
+
+.design-preview{
+
+
+    position:absolute;
+
+
+    width:130px;
+
+
+    opacity:.9;
+
+
+}
+
+
+
+
+
+
+.sizes{
+
+
+    display:flex;
+
+
+    flex-wrap:wrap;
+
+
+    justify-content:center;
+
+
+    gap:10px;
+
+
+}
+
+
+
+
+
+.color-button.selected,
+.style-button.selected,
+.size-button.selected{
+
+
+    background:#1557ff;
+
+
+    border:1px solid #00aaff;
+
+
+    box-shadow:
+
+    0 0 25px #008cff;
+
+
+}
+
+
+
+
+
+.order-button{
+
+
+    margin-top:30px;
+
+
+    background:#0066ff;
+
+
+}
+
+
+
+
+
+
+.contacts{
+
+
+    text-align:center;
+
+
+    padding:50px;
+
+
+    opacity:.8;
+
+
+}
+
+
+
+
+
+
+@media(max-width:600px){
+
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+
+.products{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
 
 }
