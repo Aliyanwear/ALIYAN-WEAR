@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,81 +12,303 @@
 
 </head>
 
+
 <body>
 
-<header>
+
+<header class="header">
 
 <img src="logo.png" class="logo">
 
-<div class="language">
-<button onclick="setLanguage('ru')">🇷🇺 RU</button>
-<button onclick="setLanguage('tj')">🇹🇯 TJ</button>
+
+<div class="languages">
+
+<button onclick="setLanguage('ru')">
+🇷🇺 RU
+</button>
+
+<button onclick="setLanguage('tj')">
+🇹🇯 TJ
+</button>
+
 </div>
 
 </header>
 
 
-<main>
-
-<h1 id="title">
-ALIYAN WEAR
-</h1>
-
-
-<p id="subtitle">
-Создай свою уникальную футболку
-</p>
 
 
 <section class="hero">
 
-<img src="tshirt-white.PNG" class="main-shirt">
 
-<button id="catalogBtn">
+<h1>
+ALIYAN WEAR
+</h1>
+
+
+<p id="heroText">
+Премиальные футболки со своим дизайном
+</p>
+
+
+<button id="catalogButton">
 Каталог
 </button>
 
 
-<button id="designBtn">
-Создать свой дизайн
+<button id="designButton">
+Создать дизайн
 </button>
+
 
 </section>
 
 
+
+
+
+
 <section class="catalog">
+
 
 <h2 id="catalogTitle">
 Каталог футболок
 </h2>
 
 
-<div class="product">
+
+<div class="products">
+
+
+
+<div class="product-card">
+
 
 <img src="tshirt-white.PNG">
 
+
 <h3>
-Oversize T-shirt
+White Oversize
 </h3>
+
 
 <p>
 2490 ₽
 </p>
 
+
 <button>
 Купить
 </button>
 
+
 </div>
+
+
+
+
+
+<div class="product-card">
+
+
+<img src="tshirt-black.PNG">
+
+
+<h3>
+Black Oversize
+</h3>
+
+
+<p>
+2490 ₽
+</p>
+
+
+<button>
+Купить
+</button>
+
+
+</div>
+
+
+
+</div>
+
 
 
 </section>
 
 
-</main>
+
+
+
+
+
+
+<section class="constructor">
+
+
+<h2>
+👕 Создать свой дизайн
+</h2>
+
+
+
+<div class="tshirt-box">
+
+
+<img 
+id="tshirtImage"
+src="tshirt-white.PNG"
+>
+
+
+
+<img 
+id="designPreview"
+class="design-preview"
+>
+
+
+
+</div>
+
+
+
+
+<h3>
+Цвет футболки
+</h3>
+
+
+<button class="color-button">
+⚪ Белая
+</button>
+
+
+<button class="color-button">
+⚫ Чёрная
+</button>
+
+
+
+
+
+<h3>
+Стиль
+</h3>
+
+
+<button class="style-button">
+Standard
+</button>
+
+
+<button class="style-button">
+Oversize
+</button>
+
+
+
+
+
+<h3>
+Размер
+</h3>
+
+
+<div class="sizes">
+
+
+<button class="size-button">
+S (44)
+</button>
+
+
+<button class="size-button">
+M (46)
+</button>
+
+
+<button class="size-button">
+L (48)
+</button>
+
+
+<button class="size-button">
+XL (50)
+</button>
+
+
+<button class="size-button">
+2XL (52)
+</button>
+
+
+<button class="size-button">
+3XL (54)
+</button>
+
+
+<button class="size-button">
+4XL (56)
+</button>
+
+
+</div>
+
+
+
+
+<h3>
+Загрузить свой дизайн
+</h3>
+
+
+<input type="file">
+
+
+
+<button class="order-button">
+Оформить заказ
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+<section class="contacts">
+
+
+<h2>
+Контакты
+</h2>
+
+
+<p>
+Instagram: @aliyan.wear
+</p>
+
+
+<p>
+WhatsApp
+</p>
+
+
+</section>
+
+
 
 
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
