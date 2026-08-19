@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,265 +10,81 @@
 
 </head>
 
-
 <body>
 
-  <header class="logo-header">
-  <img src="logo.png" alt="ALIYAN WEAR Logo">
+<header>
+
+<img src="logo.png" class="logo">
+
+<div class="language">
+<button onclick="setLanguage('ru')">🇷🇺 RU</button>
+<button onclick="setLanguage('tj')">🇹🇯 TJ</button>
+</div>
+
 </header>
 
-<section class="hero">
 
-<div class="glass">
+<main>
 
-<h1>
-ALIYAN <span>WEAR</span>
+<h1 id="title">
+ALIYAN WEAR
 </h1>
 
 
-<h2>
-Создай футболку<br>
-со своим дизайном
-</h2>
-
-
-<p>
-Premium качество<br>
-100% турецкий хлопок<br>
-Standard и Oversize<br>
-Доставка по России и Таджикистану
-</p>
-
-
-<button>
-Создать заказ
-</button>
-
-
-</div>
-
-</section>
-
-
-
-<section class="constructor">
-
-
-<h2>
-👕 Конструктор ALIYAN WEAR
-</h2>
-
-
-<p>
+<p id="subtitle">
 Создай свою уникальную футболку
 </p>
 
-<h3>
-Тарафи футболка:
-</h3>
 
-<div class="side-switch">
+<section class="hero">
 
-<button class="side-button selected" onclick="changeSide('front', this)">
-Пеш
-</button>
+<img src="tshirt-white.PNG" class="main-shirt">
 
-<button class="side-button" onclick="changeSide('back', this)">
-Пушт
-</button>
-
-</div>
-
-
-<div class="tshirt-preview">
-
-<img id="tshirtImage" src="tshirt-white.PNG">
-
-<img id="designPreview" class="design-preview" draggable="false">
-
-</div>
-
-
-
-
-<h3>
-Цвет футболки:
-</h3>
-
-<button class="color-button" onclick="changeColor('white', this)">
-⚪ Белая футболка
-</button>
-
-<button class="color-button" onclick="changeColor('black', this)">
-⚫ Чёрная футболка
+<button id="catalogBtn">
+Каталог
 </button>
 
 
-
-<h3>
-Стиль:
-</h3>
-
-
-<button class="style-button" onclick="changeStyle('Standard', this)">
-Standard
+<button id="designBtn">
+Создать свой дизайн
 </button>
-
-<button class="style-button" onclick="changeStyle('Oversize', this)">
-Oversize
-</button>
-
-
-<h3>
-Размер:
-</h3>
-
-
-<div class="sizes">
-
-<button class="size-button" onclick="changeSize('S (44)', this)">
-S (44)
-</button>
-
-<button class="size-button" onclick="changeSize('M (46)', this)">
-M (46)
-</button>
-
-<button class="size-button" onclick="changeSize('L (48)', this)">
-L (48)
-</button>
-
-<button class="size-button" onclick="changeSize('XL (50)', this)">
-XL (50)
-</button>
-
-<button class="size-button" onclick="changeSize('2XL (52)', this)">
-2XL (52)
-</button>
-
-<button class="size-button" onclick="changeSize('3XL (54)', this)">
-3XL (54)
-</button>
-
-<button class="size-button" onclick="changeSize('4XL (56)', this)">
-4XL (56)
-</button>
-
-</div>
-
-
-
-<h3>
-Добавь свой дизайн:
-</h3>
-
-
-<input type="file" onchange="uploadDesign(event)">
-<h2>
-Цена:
-</h2>
-
-
-<p>
-🇷🇺 Россия — 2490₽
-</p>
-
-
-<p>
-🇹🇯 Тоҷикистон — 259 сомонӣ
-</p>
-
-
-
-<button class="order-btn">
-Оформить заказ
-</button>
-
 
 </section>
 
 
+<section class="catalog">
 
-<section class="check">
-
-<h2>
-Проверка заказа
+<h2 id="catalogTitle">
+Каталог футболок
 </h2>
 
 
+<div class="product">
+
+<img src="tshirt-white.PNG">
+
+<h3>
+Oversize T-shirt
+</h3>
+
 <p>
-Введите номер заказа:
+2490 ₽
 </p>
-
-
-<input type="text" placeholder="ALIYAN #10245">
-
 
 <button>
-Проверить статус
+Купить
 </button>
 
-
-</section>
-
-
-
-<section class="contacts">
-
-
-<h2>
-Контакты
-</h2>
-
-
-<p>
-📸 Instagram: @aliyan.wear
-</p>
-
-
-<p>
-✉️ aliyanwear@gmail.com
-</p>
-
-
-<p>
-🇷🇺 Россия
-<br>
-🇹🇯 Тоҷикистон
-</p>
+</div>
 
 
 </section>
 
+
+</main>
 
 
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
-.tshirt-preview {
-  position: relative;
-  width: 320px;
-  height: 420px;
-  margin: 40px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(25px);
-  border-radius: 40px;
-  border: 1px solid rgba(255,255,255,0.15);
-}
-
-.tshirt-preview img {
-  max-width: 80%;
-  max-height: 80%;
-}
-
-.design-preview {
-  position: absolute;
-  width: 120px;
-  opacity: 0.9;
-}
