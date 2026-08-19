@@ -5,6 +5,9 @@ let selectedStyle = "Oversize";
 let selectedSize = "M";
 let currentSide = "front";
 
+let frontDesign = "";
+let backDesign = "";
+
 const priceRussia = 2490;
 const priceTajikistan = 259;
 
