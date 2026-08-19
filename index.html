@@ -38,6 +38,7 @@
 
 
 
+
 <section class="hero">
 
 
@@ -49,16 +50,6 @@ ALIYAN WEAR
 <p id="heroText">
 Премиальные футболки со своим дизайном
 </p>
-
-
-<button id="catalogButton">
-Каталог
-</button>
-
-
-<button id="designButton">
-Создать дизайн
-</button>
 
 
 </section>
@@ -108,6 +99,7 @@ White Oversize
 
 
 
+
 <div class="product-card">
 
 
@@ -145,13 +137,13 @@ Black Oversize
 
 
 
-
 <section class="constructor">
 
 
-<h2>
-👕 Создать свой дизайн
+<h2 id="constructorTitle">
+Создать свой дизайн
 </h2>
+
 
 
 
@@ -164,15 +156,14 @@ src="tshirt-white.PNG"
 >
 
 
-
-<img 
+<img
 id="designPreview"
 class="design-preview"
 >
 
 
-
 </div>
+
 
 
 
@@ -195,6 +186,7 @@ class="design-preview"
 
 
 
+
 <h3>
 Стиль
 </h3>
@@ -208,6 +200,8 @@ Standard
 <button class="style-button">
 Oversize
 </button>
+
+
 
 
 
@@ -261,12 +255,20 @@ XL (50)
 
 
 
+
+
+
 <h3>
-Загрузить свой дизайн
+Добавить свой дизайн
 </h3>
 
 
-<input type="file">
+<input 
+type="file"
+id="designUpload"
+accept="image/*"
+>
+
 
 
 
@@ -296,12 +298,8 @@ Instagram: @aliyan.wear
 </p>
 
 
-<p>
-WhatsApp
-</p>
-
-
 </section>
+
 
 
 
