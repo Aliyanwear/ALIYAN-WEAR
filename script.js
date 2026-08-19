@@ -1,44 +1,45 @@
-// ALIYAN WEAR
-
-let currentLanguage = "ru";
+// ALIYAN WEAR SYSTEM
 
 
-const translations = {
+let language = "ru";
+
+
+let selectedColor = "white";
+let selectedStyle = "Oversize";
+let selectedSize = "M";
+
+
+
+
+
+const text = {
+
 
 ru:{
 
-title:"ALIYAN WEAR",
+hero:
+"Премиальные футболки со своим дизайном",
 
-subtitle:"Создай свою уникальную футболку",
+catalog:
+"Каталог футболок",
 
-catalog:"Каталог футболок",
-
-catalogBtn:"Каталог",
-
-designBtn:"Создать свой дизайн",
-
-buy:"Купить",
-
-product:"Oversize T-shirt"
+design:
+"Создать свой дизайн"
 
 },
 
 
+
 tj:{
 
-title:"ALIYAN WEAR",
+hero:
+"Футболкаҳои премиум бо дизайни худатон",
 
-subtitle:"Футболкаи беназири худро созед",
+catalog:
+"Каталоги футболкаҳо",
 
-catalog:"Каталоги футболкаҳо",
-
-catalogBtn:"Каталог",
-
-designBtn:"Дизайни худро созед",
-
-buy:"Харидан",
-
-product:"Футболкаи Oversize"
+design:
+"Дизайни худро созед"
 
 }
 
@@ -47,36 +48,220 @@ product:"Футболкаи Oversize"
 
 
 
+
+
+// ЯЗЫК
+
+
 function setLanguage(lang){
 
-    currentLanguage = lang;
+
+language = lang;
 
 
-    document.getElementById("title").innerText =
-    translations[lang].title;
+
+document.getElementById("heroText").innerText =
+text[lang].hero;
 
 
-    document.getElementById("subtitle").innerText =
-    translations[lang].subtitle;
+
+document.getElementById("catalogTitle").innerText =
+text[lang].catalog;
 
 
-    document.getElementById("catalogTitle").innerText =
-    translations[lang].catalog;
+
+document.getElementById("designButton").innerText =
+text[lang].design;
 
 
-    document.getElementById("catalogBtn").innerText =
-    translations[lang].catalogBtn;
-
-
-    document.getElementById("designBtn").innerText =
-    translations[lang].designBtn;
-
-
-    document.querySelector(".product button").innerText =
-    translations[lang].buy;
-
-
-    document.querySelector(".product h3").innerText =
-    translations[lang].product;
 
 }
+
+
+
+
+
+
+
+// ЦВЕТ ФУТБОЛКИ
+
+
+document.querySelectorAll(".color-button")
+.forEach(button=>{
+
+
+button.onclick=function(){
+
+
+document.querySelectorAll(".color-button")
+.forEach(btn=>{
+btn.classList.remove("selected");
+});
+
+
+
+this.classList.add("selected");
+
+
+
+if(this.innerText.includes("Белая")){
+
+
+selectedColor="white";
+
+
+document.getElementById("tshirtImage").src =
+"tshirt-white.PNG";
+
+
+}
+
+
+
+else{
+
+
+selectedColor="black";
+
+
+document.getElementById("tshirtImage").src =
+"tshirt-black.PNG";
+
+
+}
+
+
+
+};
+
+
+
+});
+
+
+
+
+
+
+
+// СТИЛЬ
+
+
+document.querySelectorAll(".style-button")
+.forEach(button=>{
+
+
+button.onclick=function(){
+
+
+document.querySelectorAll(".style-button")
+.forEach(btn=>{
+btn.classList.remove("selected");
+});
+
+
+this.classList.add("selected");
+
+
+selectedStyle=this.innerText;
+
+
+};
+
+
+});
+
+
+
+
+
+
+
+
+// РАЗМЕР
+
+
+document.querySelectorAll(".size-button")
+.forEach(button=>{
+
+
+button.onclick=function(){
+
+
+document.querySelectorAll(".size-button")
+.forEach(btn=>{
+btn.classList.remove("selected");
+});
+
+
+this.classList.add("selected");
+
+
+selectedSize=this.innerText;
+
+
+};
+
+
+});
+
+
+
+
+
+
+
+
+// ЗАГРУЗКА ДИЗАЙНА
+
+
+
+document.querySelector("input[type=file]")
+.addEventListener("change",function(event){
+
+
+let file =
+event.target.files[0];
+
+
+if(!file)return;
+
+
+
+let reader =
+new FileReader();
+
+
+
+reader.onload=function(e){
+
+
+document.getElementById("designPreview")
+.src=e.target.result;
+
+
+};
+
+
+
+reader.readAsDataURL(file);
+
+
+
+});
+
+
+
+
+
+
+
+// СТАРТ
+
+
+document.querySelector(".style-button")
+.classList.add("selected");
+
+
+document.querySelector(".size-button")
+.classList.add("selected");
