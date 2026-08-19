@@ -9,7 +9,7 @@
 body{
 
     background:
-    radial-gradient(circle at top,#1b5cff,#050505 60%);
+    radial-gradient(circle at top,#164dff,#050505 65%);
 
     color:white;
 
@@ -41,32 +41,24 @@ body{
 
 
 
-
 button{
 
     background:
     rgba(255,255,255,0.12);
 
-
     color:white;
-
 
     border:
 
     1px solid rgba(255,255,255,0.2);
 
-
     padding:12px 22px;
-
 
     border-radius:30px;
 
-
     cursor:pointer;
 
-
     transition:.3s;
-
 
 }
 
@@ -83,38 +75,16 @@ button:hover{
 
 
 
+
 .hero{
 
+    max-width:700px;
 
-    margin:30px auto;
-
-
-    max-width:600px;
-
-
-    padding:50px 30px;
-
+    margin:20px auto;
 
     text-align:center;
 
-
-    background:
-
-    rgba(255,255,255,0.08);
-
-
-
-    backdrop-filter:blur(30px);
-
-
-
-    border:
-
-    1px solid rgba(255,255,255,0.15);
-
-
-
-    border-radius:40px;
+    padding:50px 20px;
 
 
 }
@@ -123,26 +93,11 @@ button:hover{
 
 .hero h1{
 
-
     font-size:55px;
-
 
     letter-spacing:3px;
 
-
 }
-
-
-
-.hero p{
-
-    margin:20px;
-
-    opacity:.8;
-
-}
-
-
 
 
 
@@ -150,17 +105,15 @@ button:hover{
 
 .catalog{
 
+    text-align:center;
 
     padding:30px;
-
-    text-align:center;
 
 }
 
 
 
 .products{
-
 
     display:flex;
 
@@ -176,36 +129,29 @@ button:hover{
 
 .product-card{
 
-
     width:300px;
-
 
     padding:25px;
 
 
     background:
-
-    rgba(255,255,255,0.08);
-
+    rgba(255,255,255,.08);
 
 
-    backdrop-filter:blur(30px);
-
+    backdrop-filter:blur(25px);
 
 
     border-radius:35px;
 
 
     border:
-
-    1px solid rgba(255,255,255,0.15);
+    1px solid rgba(255,255,255,.15);
 
 }
 
 
 
 .product-card img{
-
 
     width:230px;
 
@@ -215,61 +161,44 @@ button:hover{
 
 
 
-
 .constructor{
-
-
-    margin:50px auto;
 
     max-width:600px;
 
+    margin:50px auto;
+
     text-align:center;
 
-
     padding:30px;
-
 
 }
 
 
 
-.tshirt-box{
 
+
+.tshirt-box{
 
     position:relative;
 
-
     width:320px;
-
 
     height:420px;
 
-
     margin:30px auto;
-
-
 
     display:flex;
 
-
     justify-content:center;
-
 
     align-items:center;
 
 
-
     background:
-
     rgba(255,255,255,.06);
 
 
-
     border-radius:40px;
-
-
-
-    backdrop-filter:blur(30px);
 
 
 }
@@ -278,28 +207,25 @@ button:hover{
 
 .tshirt-box img{
 
-
     max-width:80%;
 
-
     max-height:80%;
-
 
 }
 
 
 
-.design-preview{
 
+
+.design-preview{
 
     position:absolute;
 
-
     width:130px;
-
 
     opacity:.9;
 
+    cursor:move;
 
 }
 
@@ -310,18 +236,13 @@ button:hover{
 
 .sizes{
 
-
     display:flex;
-
 
     flex-wrap:wrap;
 
-
     justify-content:center;
 
-
     gap:10px;
-
 
 }
 
@@ -344,65 +265,40 @@ button:hover{
 
     0 0 25px #008cff;
 
-
 }
-
 
 
 
 
 .order-button{
 
-
     margin-top:30px;
-
 
     background:#0066ff;
 
-
 }
-
-
 
 
 
 
 .contacts{
 
-
     text-align:center;
-
 
     padding:50px;
 
-
     opacity:.8;
 
-
 }
 
 
 
 
 
+input[type="file"]{
 
-@media(max-width:600px){
+    margin:20px;
 
-
-.hero h1{
-
-font-size:40px;
-
-}
-
-
-.products{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
+    color:white;
 
 }
