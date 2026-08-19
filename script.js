@@ -119,6 +119,12 @@ function uploadDesign(event){
 
         const design = document.getElementById("designPreview");
 
+if(currentSide === "front"){
+    frontDesign = e.target.result;
+}else{
+    backDesign = e.target.result;
+}
+
 design.src = e.target.result;
     }
 
