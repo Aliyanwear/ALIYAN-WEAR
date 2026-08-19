@@ -2,303 +2,124 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
-
 
 body{
-
-    background:
-    radial-gradient(circle at top,#164dff,#050505 65%);
-
+    background:#06142f;
     color:white;
-
-    min-height:100vh;
-
 }
 
-
-
-.header{
-
+header{
+    width:100%;
+    padding:25px 20px;
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
-    padding:25px;
-
+    backdrop-filter:blur(15px);
 }
-
-
 
 .logo{
-
-    width:150px;
-
+    width:90px;
+    height:auto;
 }
 
-
-
-button{
-
-    background:
-    rgba(255,255,255,0.12);
-
+.lang button{
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
     color:white;
-
-    border:
-
-    1px solid rgba(255,255,255,0.2);
-
-    padding:12px 22px;
-
+    padding:12px 25px;
     border-radius:30px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+    margin-left:10px;
+    font-size:16px;
 }
 
-
-
-button:hover{
-
-    background:
-    rgba(0,102,255,.5);
-
+.lang button:hover{
+    background:#0066ff;
 }
-
-
-
-
-
 
 .hero{
-
-    max-width:700px;
-
-    margin:20px auto;
-
     text-align:center;
-
-    padding:50px 20px;
-
-
+    padding:80px 20px;
 }
-
-
 
 .hero h1{
-
     font-size:55px;
-
-    letter-spacing:3px;
-
+    letter-spacing:5px;
 }
 
+.hero p{
+    margin-top:20px;
+    font-size:22px;
+    opacity:0.8;
+}
 
-
-
+h2{
+    text-align:center;
+    font-size:40px;
+    margin:50px 0 30px;
+}
 
 .catalog{
-
-    text-align:center;
-
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
     padding:30px;
-
 }
 
-
-
-.products{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:25px;
-
-    flex-wrap:wrap;
-
-}
-
-
-
-.product-card{
-
-    width:300px;
-
+.card{
+    background:rgba(255,255,255,0.12);
+    border-radius:30px;
     padding:25px;
-
-
-    background:
-    rgba(255,255,255,.08);
-
-
-    backdrop-filter:blur(25px);
-
-
-    border-radius:35px;
-
-
-    border:
-    1px solid rgba(255,255,255,.15);
-
-}
-
-
-
-.product-card img{
-
-    width:230px;
-
-}
-
-
-
-
-
-.constructor{
-
-    max-width:600px;
-
-    margin:50px auto;
-
     text-align:center;
-
-    padding:30px;
-
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.2);
 }
 
-
-
-
-
-.tshirt-box{
-
-    position:relative;
-
-    width:320px;
-
-    height:420px;
-
-    margin:30px auto;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-
-    background:
-    rgba(255,255,255,.06);
-
-
-    border-radius:40px;
-
-
+.card img{
+    width:100%;
 }
 
-
-
-.tshirt-box img{
-
-    max-width:80%;
-
-    max-height:80%;
-
-}
-
-
-
-
-
-.design-preview{
-
-    position:absolute;
-
-    width:130px;
-
-    opacity:.9;
-
-    cursor:move;
-
-}
-
-
-
-
-
-
-.sizes{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:10px;
-
-}
-
-
-
-
-
-.color-button.selected,
-.style-button.selected,
-.size-button.selected{
-
-
-    background:#1557ff;
-
-
-    border:1px solid #00aaff;
-
-
-    box-shadow:
-
-    0 0 25px #008cff;
-
-}
-
-
-
-
-.order-button{
-
-    margin-top:30px;
-
+.card button{
+    margin-top:20px;
+    padding:15px 40px;
+    border-radius:30px;
+    border:none;
     background:#0066ff;
-
-}
-
-
-
-
-.contacts{
-
-    text-align:center;
-
-    padding:50px;
-
-    opacity:.8;
-
-}
-
-
-
-
-
-input[type="file"]{
-
-    margin:20px;
-
     color:white;
+    font-size:18px;
+}
+
+
+.contact{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.contact a{
+    display:inline-block;
+    margin-top:20px;
+    background:#25D366;
+    color:white;
+    padding:18px 40px;
+    border-radius:40px;
+    text-decoration:none;
+    font-size:20px;
+}
+
+
+@media(max-width:600px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+h2{
+    font-size:30px;
+}
 
 }
