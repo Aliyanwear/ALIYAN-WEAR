@@ -134,13 +134,10 @@ button:active{
 
 .color-button.selected,
 .style-button.selected,
-.size-button.selected{
-    background: rgba(0,102,255,0.35);
-    border:1px solid rgba(0,122,255,0.8);
-
-    box-shadow:
-    0 0 25px rgba(0,102,255,0.6),
-    inset 0 0 20px rgba(255,255,255,0.15);
+.side-button.selected{
+    background:#1557ff;
+    border:1px solid #008cff;
+    box-shadow:0 0 20px #008cff;
 }
 
 
